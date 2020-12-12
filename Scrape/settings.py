@@ -77,8 +77,11 @@ WSGI_APPLICATION = 'Scrape.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'scraper',
+        'CLIENT': {
+           'host': '127.0.0.1:27017',
+        }
     }
 }
 
